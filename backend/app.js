@@ -3,10 +3,7 @@ const app = express();
 const PORT = 8080;
 const cors = require('cors');
 
-app.use(cors({
-    origin: 'http://localhost:3000', // Replace with your Next.js frontend URL
-    methods: ['GET', 'POST'], // Specify allowed HTTP methods
-  }));
+app.use(cors());
 app.use(express.json());
 
 const bookings = []; // Simple in-memory storage for bookings
